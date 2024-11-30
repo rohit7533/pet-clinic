@@ -3,8 +3,10 @@ kind: Deployment
 metadata:
   name: pet-clinic
   namespace: demo
-  labels:
-    tekton.dev/pipelines: demo/springboot-pipeline
+  annotations:
+    backstage.io/ci-cd: enabled     # Enables Backstage integration   # Custom version annotation
+    owner: team-devops             # Owner of the pipeline
+    backstage.io/kubernetes-id: springboot-pipeline  # Backstage ID to link the pipeline
 spec:
   replicas: 1
   selector:
