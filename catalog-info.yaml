@@ -3,6 +3,10 @@ kind: Component
 metadata:
   name:  "pet-clinic"
   description: Spring boot application
+  links:
+    - url:https://github.com/rohit7533/pet-clinic
+      title: Pet Clinic
+      icon: dashboard
   annotations:
     backstage.io/managed-by-location: url:https://github.com/rohit7533/pet-clinic
     backstage.io/managed-by-origin-location: url:https://github.com/rohit7533/pet-clinic
