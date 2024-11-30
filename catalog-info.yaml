@@ -12,6 +12,7 @@ metadata:
     backstage.io/managed-by-origin-location: url:https://github.com/rohit7533/pet-clinic
     tekton.dev/pipelines: demo/springboot-pipeline
     backstage.io/kubernetes-id: pet-clinic
+    backstage.io/kubernetes-namespace: demo
     tektonci/enabled: 'true'
     tektonci/namespace: demo
 spec:

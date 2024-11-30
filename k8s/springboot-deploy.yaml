@@ -6,7 +6,8 @@ metadata:
   annotations:
     backstage.io/ci-cd: enabled     # Enables Backstage integration   # Custom version annotation
     owner: team-devops             # Owner of the pipeline
-    backstage.io/kubernetes-id: springboot-pipeline  # Backstage ID to link the pipeline
+    backstage.io/kubernetes-id: pet-clinic        # Matches the Kubernetes resources
+    backstage.io/kubernetes-namespace: demo       # Namespace of the resources
 spec:
   replicas: 1
   selector:
@@ -17,6 +18,8 @@ spec:
       labels:
         app: pet-clinic
     spec:
+      imagePullSecrets:
+      - name: registry-auth
       containers:
         - name: pet-clinic
           image: idpdeveacr.azurecr.io/pet-clinic:latest
