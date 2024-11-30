@@ -2,6 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
   name: springboot-pipeline-run
+  namespace: demo
   annotations:
     backstage.io/ci-cd: enabled     # Enables Backstage integration
     tekton.dev/version: v1beta1    # Custom version annotation
