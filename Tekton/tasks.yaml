@@ -4,7 +4,7 @@ metadata:
   name: git-clone
   namespace: demo
   labels:
-    tekton.dev/pipelines: demo/springboot-pipeline
+    tekton.dev/pipelines: "demo/springboot-pipeline"
 spec:
   steps:
     - name: clone-repo
@@ -42,7 +42,7 @@ metadata:
   name: docker-build-and-push
   namespace: demo
   labels:
-    tekton.dev/pipelines: demo/springboot-pipeline
+    tekton.dev/pipelines: "demo/springboot-pipeline"
 spec:
   steps:
     - name: buildah-build
@@ -78,7 +78,7 @@ metadata:
   name: deploy-to-aks
   namespace: demo
   labels:
-    tekton.dev/pipelines: demo/springboot-pipeline
+    tekton.dev/pipelines: "demo/springboot-pipeline"
 spec:
   steps:
     - name: kubectl-apply

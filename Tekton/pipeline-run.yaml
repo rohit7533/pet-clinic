@@ -3,7 +3,7 @@ kind: PipelineRun
 metadata:
   name: springboot-pipeline-run
   labels:
-    tekton.dev/pipelines: demo/springboot-pipeline
+    tekton.dev/pipelines: "demo/springboot-pipeline"
 spec:
   pipelineRef:
     name: springboot-pipeline
