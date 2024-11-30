@@ -1,10 +1,10 @@
-FROM openjdk:latest
+FROM docker.io/openjdk:latest
 
 # Set the working directory to /app
 WORKDIR /app
 
 #RUN mvn clean package
-
+RUN ls -latr
 # Copy the JAR file to the container
 COPY workspace/source/target/spring-petclinic-*.jar app.jar
 
