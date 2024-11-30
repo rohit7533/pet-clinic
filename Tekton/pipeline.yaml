@@ -2,8 +2,14 @@ apiVersion: tekton.dev/v1beta1
 kind: Pipeline
 metadata:
   name: springboot-pipeline
-  labels:
-    tekton.dev/pipelines: "demo/springboot-pipeline"
+  annotations:
+    backstage.io/ci-cd: enabled     # Enables Backstage integration
+    tekton.dev/version: v1beta1    # Custom version annotation
+    owner: team-devops             # Owner of the pipeline
+    purpose: build-deploy
+    backstage.io/kubernetes-id: springboot-pipeline  # Backstage ID to link the pipeline
+    tektonci/enabled: 'true'                         # Enables Tekton CI/CD integration in Backstage
+    tektonci/namespace: demo                         # Namespace for the pipeline
 spec:
   params:
     - name: repo_url
