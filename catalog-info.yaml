@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1beta1
 kind: Component
 metadata:
   name: pet-clinic
+  namespace: demo
   description: Spring boot application
   links:
     - url: https://github.com/rohit7533/pet-clinic
@@ -18,5 +19,5 @@ metadata:
     tektonci/namespace: demo
 spec:
   type: service
-  owner: rohit7533
+  owner: ''
   lifecycle: production
