@@ -13,7 +13,7 @@ metadata:
     tekton.dev/pipelines: demo/springboot-pipeline
     backstage.io/kubernetes-id: pet-clinic
     backstage.io/kubernetes-cluster: bsidp-cluster
-    backstage.io/kubernetes-namespace: demo
+    backstage.io/kubernetes-namespace: bsidp-dev
     tektonci/enabled: 'true'
     tektonci/namespace: demo
 spec:
