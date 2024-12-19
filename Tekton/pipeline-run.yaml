@@ -25,7 +25,7 @@ spec:
     # - name: helm_chart
     #   value: "charts/springboot"
     - name: namespace
-      value: "demo"
+      value: "default"
   workspaces:
     - name: shared-workspace
       volumeClaimTemplate:
