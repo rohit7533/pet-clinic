@@ -2,12 +2,12 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pet-clinic
-  namespace: demo
+  namespace: default
   annotations:
     backstage.io/ci-cd: enabled     # Enables Backstage integration   # Custom version annotation
     owner: team-devops             # Owner of the pipeline
     backstage.io/kubernetes-id: pet-clinic        # Matches the Kubernetes resources
-    backstage.io/kubernetes-namespace: demo       # Namespace of the resources
+    backstage.io/kubernetes-namespace: default       # Namespace of the resources
 spec:
   replicas: 1
   selector:
@@ -31,7 +31,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: pet-clinic
-  namespace: demo
+  namespace: default
 spec:
   selector:
     app: pet-clinic
