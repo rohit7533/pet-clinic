@@ -2,7 +2,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: git-clone
-  namespace: demo
+  namespace: default
   annotations:
     backstage.io/ci-cd: enabled     # Enables Backstage integration
     tekton.dev/version: v1beta1    # Custom version annotation
@@ -30,7 +30,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: build-app
-  namespace: demo
+  namespace: default
   annotations:
     backstage.io/ci-cd: enabled     # Enables Backstage integration
     tekton.dev/version: v1beta1    # Custom version annotation
@@ -52,7 +52,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: docker-build-and-push
-  namespace: demo
+  namespace: default
   annotations:
     backstage.io/ci-cd: enabled     # Enables Backstage integration
     tekton.dev/version: v1beta1    # Custom version annotation
@@ -60,7 +60,7 @@ metadata:
     purpose: build-deploy
     backstage.io/kubernetes-id: springboot-pipeline  # Backstage ID to link the pipeline
     tektonci/enabled: 'true'                         # Enables Tekton CI/CD integration in Backstage
-    tektonci/namespace: demo                         # Namespace for the pipeline
+    tektonci/namespace: default                         # Namespace for the pipeline
 spec:
   steps:
     - name: buildah-build
@@ -94,7 +94,7 @@ apiVersion: tekton.dev/v1beta1
 kind: Task
 metadata:
   name: deploy-to-aks
-  namespace: demo
+  namespace: default
   annotations:
     backstage.io/ci-cd: enabled     # Enables Backstage integration
     tekton.dev/version: v1beta1    # Custom version annotation
@@ -102,7 +102,7 @@ metadata:
     purpose: build-deploy
     backstage.io/kubernetes-id: springboot-pipeline  # Backstage ID to link the pipeline
     tektonci/enabled: 'true'                         # Enables Tekton CI/CD integration in Backstage
-    tektonci/namespace: demo                         # Namespace for the pipeline
+    tektonci/namespace: default                         # Namespace for the pipeline
 spec:
   steps:
     - name: kubectl-apply
